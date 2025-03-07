@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Resume - MOSHIUR RAHMAN TAZ MIRAGE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* General Reset */
+    /* ===== Base Styles ===== */
     * {
       margin: 0;
       padding: 0;
@@ -14,22 +14,23 @@
     }
 
     body {
-       font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto', sans-serif;
       color: #333;
       background-color: #f5f5f5;
-      line-height: 1.2;
+      line-height: 1.4;
     }
 
-    /* Container for the two-column layout */
     .resume-container {
       display: flex;
       max-width: 1100px;
-      margin: 0 auto;
+      margin: 20px auto;
       background: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    //  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
     }
 
-    /* Left Column */
+    /* Left Column Styles */
     .left-column {
       width: 35%;
       background-color: #2c3e50;
@@ -38,7 +39,8 @@
     }
 
     .left-column h1 {
-      font-size: 24px;
+      font-size: 26px;
+      letter-spacing: 0.5px;
       margin-bottom: 5px;
     }
 
@@ -50,30 +52,46 @@
     }
 
     .profile-pic {
-	  
       width: 150px;
       height: 150px;
       background-color: #ccc;
       border-radius: 50%;
       margin: 0 0 20px 35px;
-     
-         background-image: url('rem.jpg');
-         background-size: 180%;
-         background-position: center;
-      
+      background-image: url('rem.jpg');
+      background-size: 180%;
+      background-position: center;
     }
 
-    /* Contact info in left column */
     .contact-info {
       margin: 20px 0;
       font-size: 14px;
     }
+
     .contact-info p {
       margin: 8px 0;
       line-height: 1.4;
+      position: relative;
+      padding-left: 24px;
     }
 
-    /* Section headings in left column */
+    .contact-info p::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 16px;
+      height: 16px;
+      opacity: 0.8;
+    }
+
+    .contact-info p:nth-child(1)::before {
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>');
+    }
+
+    .contact-info p:nth-child(2)::before {
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>');
+    }
+
     .left-column h3 {
       margin-top: 30px;
       margin-bottom: 10px;
@@ -86,7 +104,6 @@
     .left-column ul {
       list-style-type: none;
       padding-left: 0;
-      margin-left: 0;
     }
 
     .left-column ul li {
@@ -94,40 +111,39 @@
       font-size: 14px;
     }
 
-    /* Right Column */
+    /* Right Column Styles */
     .right-column {
       width: 65%;
       padding: 15px 20px;
     }
 
-    /* Section headings in right column */
     .right-column h2 {
       font-size: 18px;
-      color: #2c3e50;
+      color: #34495e;
+      font-weight: 600;
       margin-bottom: 10px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 3px;
     }
 
-    /* Sub-headings in right column (job titles, project names, etc.) */
     .right-column h3 {
       font-size: 16px;
       margin: 15px 0 5px;
-      color: #333;
+      color: #2c3e50;
+      font-weight: 500;
     }
 
-    /* Bullet points / Lists in right column */
     .right-column ul {
       list-style-type: disc;
-      margin-left: 20px;
+      margin-left: 18px;
       margin-bottom: 15px;
     }
 
     .right-column ul li {
-      margin: 6px 0;
+      margin: 8px 0;
+      padding-right: 10px;
     }
 
-    /* Key Projects styling */
     .project {
       margin-left: 20px;
       margin-bottom: 10px;
@@ -136,55 +152,79 @@
     .project h4 {
       font-size: 15px;
       margin: 10px 0 5px;
-      color: #555;
+      color: #3498db;
+      font-weight: 500;
+    }
+
+    .project:not(:last-child) {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+    }
+
+    /* ===== Optimizations for A4 Printing ===== */
+    /* Define the A4 page size and margin */
+    @page {
+      size: A4;
+      margin: 15mm;
+    }
+
+    @media print {
+      html, body {
+        width: 210mm;
+      }
+      .resume-container {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        box-shadow: none;
+        border: none;
+        overflow: hidden;
+      }
+      /* Optionally, reduce padding and adjust font sizes for a tighter layout */
+      .left-column, .right-column {
+       // padding: 15px 10px;
+      }
+      .left-column h1 {
+        font-size: 22px;
+      }
+      .right-column h2 {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
 
 <div class="resume-container">
-
-  <!-- LEFT COLUMN -->
+  <!-- Left Column -->
   <div class="left-column">
-  <div class="profile-pic"></div>
-    <!-- Name & Title -->
+    <div class="profile-pic"></div>
     <h1>MOSHIUR RAHMAN TAZ MIRAGE</h1>
     <h2>Senior Software Engineer</h2>
 
-    <!-- Optional Profile Picture Placeholder -->
-    
-
-    <!-- Contact Information -->
     <div class="contact-info">
       <p><strong>Email:</strong> moshiur.mirage@gmail.com</p>
       <p><strong>Phone:</strong> +8801766 959995</p>
       <p><strong>Location:</strong> Dhaka, Bangladesh</p>
     </div>
 
-    <!-- Summary -->
     <h3>Professional Summary</h3>
     <p style="margin-bottom: 15px;">
-  ERP specialist with 4+ years of experience developing and customizing enterprise solutions using Spring Boot and RESTful web services. Expertise spans inventory, supply chain, and financial modules, with a strong full-stack background in Agile development.
-</p>
+      ERP specialist with 4+ years of experience developing and customizing enterprise solutions using Spring Boot and RESTful web services. Expertise spans inventory, supply chain, and financial modules, with a strong full-stack background in Agile development.
+    </p>
 
-    <!-- Skills -->
     <h3>Technical Skills</h3>
     <ul>
       <li><strong>Languages:</strong> Java, SQL, JavaScript</li>
       <li><strong>Frameworks:</strong> Spring Boot, Microservices, Hibernate, React</li>
       <li><strong>Databases:</strong> Microsoft SQL Server, PostgreSQL, MySQL</li>
-      <li><strong>Tools:</strong> Git, Maven, Gradle,Crystal Report</li>
+      <li><strong>Tools:</strong> Git, Maven, Gradle, Crystal Report</li>
       <li><strong>ERP Modules:</strong> Inventory, Supply Chain, Sales, Fixed Assets & Commercial</li>
     </ul>
-
-    <!-- Languages (if needed) -->
-
   </div>
 
-  <!-- RIGHT COLUMN -->
+  <!-- Right Column -->
   <div class="right-column">
-
-    <!-- Experience -->
     <h2>Professional Experience</h2>
 
     <h3>Orange Solutions Ltd. | Senior Software Engineer</h3>
@@ -194,24 +234,26 @@
       <li>Conducted client requirement analysis and system optimization</li>
     </ul>
 
-    <h3>Key Projects</h3>
+    <h2>Key Projects</h2>
     <div class="project">
-      <h4>Gazi Group ERP System</h4>
+      <h4>Gazi Group ERP</h4>
       <ul>
         <li>Developed Inventory, Supply Chain, and Commercial modules</li>
-		<li>Implemented and developed Local & Foreign procurement</li>
+        <li>Implemented and developed Local & Foreign procurement</li>
         <li>Integrated sales workflows with accounting system</li>
-        <li>Implemented batch tracking and stock management</li>
+        <li>Implemented stock management</li>
+		<li>Developed LC Module</li>
       </ul>
     </div>
+
     <div class="project">
       <h4>United Aygaz ERP</h4>
       <ul>
-        <li>Customized Inventory and Supply Chain modules</li>
-        <li>Developed commercial transaction processing system</li>
-        <li>Implemented vendor management features</li>
+        <li>Worked on Inventory and Supply Chain modules</li>
+        <li>Implemented LC Module</li>
       </ul>
     </div>
+
     <div class="project">
       <h4>United Hospital ERP</h4>
       <ul>
@@ -220,31 +262,27 @@
         <li>Integrated Inventory & procurement processes</li>
       </ul>
     </div>
-	
-	<div class="project">
+
+    <div class="project">
       <h4>E-Prescription & Inventory Management System (BIWTA)</h4>
       <ul>
         <li>Developed Prescription management system</li>
-		<li>Medicine procurement and inventory management</li>
-        <li>Batch wise medicine tracking </li>
-       
+        <li>Medicine procurement and inventory management</li>
+        <li>Batch wise medicine tracking</li>
       </ul>
     </div>
 
-    <!-- Education -->
     <h2>Education & Certification</h2>
     <ul>
       <li>B.Sc in Zoology | Jagannath University (2014-2019)</li>
       <li>Enterprise Systems Analysis & Design-JEE | IDB-BISEW</li>
     </ul>
-
-    <!-- Why I'm a Strong Candidate -->
-    <h2>Why I'm a Strong Candidate</h2>
+	<h2>Why I'm a Strong Candidate</h2>
     <ul>
       <li>Proven experience in complex ERP implementations</li>
       <li>Deep understanding of business processes across industries</li>
+	  <li>Excellent problem-solving skills</li>
     </ul>
-
   </div>
 </div>
 

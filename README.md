@@ -23,7 +23,7 @@ I am passionate about **clean architecture, maintainable code, and building syst
 
 ## Technical Skills
 
-**Programming Languages:** Java, JavaScript, SQL, TypeScript  
+**Programming Languages:** Java, JavaScript, SQL  
 **Backend Technologies:** Spring Boot, Microservices, Hibernate, REST APIs, Distributed Systems, Caching (Redis, Caffeine)  
 **Frontend Technologies:** React, Component-Based UI, Hooks, State Management  
 **Databases:** Microsoft SQL Server, PostgreSQL, MySQL (Query Optimization, Indexing, Stored Procedures)  
@@ -38,15 +38,15 @@ I am passionate about **clean architecture, maintainable code, and building syst
 
 ### Adventure Dhaka Ltd. | Software Engineer
 **Jun 2025 – Present**  
-- Developed distributed microservices for hotel channel management and real-time booking, improving throughput by 30%.  
-- Integrated third-party APIs for room availability, pricing, and booking, reducing sync latency by 40%.  
-- Designed dynamic pricing and discount engine, increasing automation coverage by 60%.  
+- Developed distributed microservices for hotel channel management and real-time booking.  
+- Integrated third-party APIs for room availability, pricing, and booking, reducing sync latency by 50%.  
+- Designed dynamic pricing and discount engine.  
 **Tech Stack:** Java, Spring Boot, Microservices, MySQL, Redis, Docker, Kubernetes, React
 
 ### Orange Solutions Ltd. | Senior Software Engineer
 **Dec 2020 – May 2025**  
-- Built ERP modules including Inventory, Accounts, Procurement, and Supply Chain, improving system accuracy by 35%.  
-- Delivered full-stack features with React and backend services with Java/Spring Boot, optimizing query performance by 50%.  
+- Built ERP modules including Inventory, Accounts, Procurement, and Supply Chain.  
+- Delivered full-stack features with React and backend services with Java/Spring Boot.  
 - Led module teams, code reviews, and mentoring for clean coding and architecture best practices.  
 **Tech Stack:** Java, Spring Boot, React, MS SQL Server, ELK, Git, Maven, Docker
 

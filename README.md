@@ -54,7 +54,7 @@ I am passionate about **clean architecture, maintainable code, and building syst
 
 ## Key Projects
 
-- **[Skyticket.com – Hotel Channel Manager & Booking Platform](https://moshiur-rahman-mirage.github.io/moshiurcv/)**  
+- **[Skyticket.com – Hotel Channel Manager & Booking Platform]**  
   Real-time booking platform with dynamic pricing, OTA integrations, and high-traffic handling.  
   **Tech Stack:** Java, Spring Boot, MySQL, Redis, Microservices, Kubernetes
 
